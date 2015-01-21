@@ -1,0 +1,9 @@
+/bin
+/build
+/cocos2d
+/proj*
+CMakeLists.txt
+GPATH
+GRTAGS
+GTAGS
+.cocos-project.json
