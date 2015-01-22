@@ -1,5 +1,4 @@
 #include "mapchoosescene.h"
-
 MapChooseScene::MapChooseScene()
 {
 }
@@ -93,6 +92,8 @@ void MapChooseScene::onTouchEnded(Touch *touch, Event *unusedEvent)
     {
         if(currentPage == 2)
         {
+            log("currentpage is 2");
+
             //auto scene = TransitionFadeBL::create(2, seaScene::create());
             //Director::getInstance()->pushScene(scene);
         }
@@ -122,6 +123,7 @@ void MapChooseScene::adjustScrollView(float offset)
     }
 
     Point adjustPos = Point(-visibleSize.width*(currentPage-1), 0);
+
     scrollView->setContentOffset(adjustPos, true);
 }
 
