@@ -77,7 +77,6 @@ void PopupLayer::onEnter()
         getLabelTitle()->setColor(Color3B(0,0,0));
         addChild(getLabelTitle());
     }
-    
     // show content of text box
     auto ltf = getLabelContentText();
     if (ltf){

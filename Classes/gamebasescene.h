@@ -18,14 +18,24 @@ class GameBaseScene : public Layer
     virtual void addMap(){};
     void onExit();
     void initTiledGrid(){};
-    vid addDice();
+    void addDice();
     CREATE_FUNC(GameBaseScene);
-
   private:
-    static const int titleColsCount = 20;
-    static const int titleRowsCount = 15;
+    CC_SYNTHESIZE(Animate*, dice_animate, Dice_animate);
+    CC_SYNTHESIZE(Sprite*, diceSprite, DiceSprite)
+  private:
+    static const int tileColsCount = 20;
+    static const int tileRowsCount = 15;
+    static const int tileWidth = 32;
+    static const int tileHeight = 32;
+    static const int tableStartPosition_x = 650;
+    static const int tableStartPosition_y = 450;
+    static const int tableWidth = 50;
+    static const int tableHeight = 40;
+    static const int FONT_SIZE = 20;
     SpriteFrameCache *diceFrameCache;
     TMXTiledMap* map;
+
 };
 
 
